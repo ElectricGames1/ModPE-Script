@@ -11,51 +11,22 @@ var sdcard = android.os.Environment.getExternalStorageDirectory();var File = jav
 var myfile = new file.select(sdcard,"setTile Generator.txt");
 file.create(myfile);
 
+var xx; 
+var yy; 
+var zz;
+
 ModPE.setItem(500,"book_enchanted",0,"setTile Info");
 Player.addItemCreativeInv(500);
 
+ModPE.setItem(501,"blaze_rod",0,"setTile Ativar!");
+Player.addItemCreativeInv(501);
+
 function newLevel()
 {
-	clientMessage("setTile Generator By Electric v" + version.name + " ©\nOne commad example /setTile 0 +1 0 17\nsetTile x y z id\n@EletricGames123");
-}
-
-function useItem(x,y,z,i)
-{
-	if(i==500)
-	{
-		clientMessage("x = esquerdo x+\nx = direito x- \nz+ = para frente\nz- = blocos para tras\ny + = blocos para cima \ny- = blocos para baixo");
-	}
+	clientMessage(ChatColor.GOLD + "setTile Generator By Electric v" + version.name + " ©" + "\n" + ChatColor.YELLOW + "Comando Exemplo /setTile 0 +1 0 17" + "\n" + ChatColor.DARK_GREEN + "setTile x y z id, Ativar Mod Com Um Novo Item" + "\n" + ChatColor.AQUA + "@EletricGames123");
 }
 
 function procCmd(cmd) {
 	cmd = cmd.split(" ");
 	if (cmd[0] != "setTile" && cmd[0] != "hold") return;
 	
-	var slot_1 = 0
-	var slot_2 = 0;
-	var slot_3 = 0;
-	var id = 0;
-	
-	var xx = getPlayerX();
-	var yy = getPlayerY();
-	var zz = getPlayerZ();
-	
-	if (cmd.length >= 2) {
-		slot_1 = parseInt(cmd[1]);
-	}
-	if (cmd.length >= 3) {
-		slot_2 = parseInt(cmd[2]);
-	}
-	if (cmd.length >= 4) {
-		slot_3 = parseInt(cmd[3]);
-	}
-	if (cmd.length >= 5) {
-		id = parseInt(cmd[4]);
-	}
-	
-	if (cmd[0] == "setTile") {
-		setTile(xx + slot_1, yy + slot_2, zz + slot_3,  id);
-		clientMessage(ChatColor.YELLOW + "Salvo na Memória Interna, Adicionado bloco posição:\nsetTile " + ChatColor.GOLD + slot_1 + ", " + slot_2 + ", " + slot_3  + ", " + id);
-		file.write(myfile,"setTile " + "x" + slot_1 + ", " + "y" + slot_2 + ", " + "z" + slot_3 + ", " + id);
-	}
-}
