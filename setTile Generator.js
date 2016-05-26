@@ -10,9 +10,20 @@ var sdcard = android.os.Environment.getExternalStorageDirectory();var File = jav
 var myfile = new file.select(sdcard,"setTile Generator.txt");
 file.create(myfile);
 
+ModPE.setItem(500,"book_enchanted",0,"setTile Info");
+Player.addItemCreativeInv(500);
+
 function newLevel()
 {
 	clientMessage("setTile Generator By Electric v" + version.name + " ©\nOne commad example /setTile 0 +1 0 17\nsetTile x y z id\n@EletricGames123");
+}
+
+function useItem(x,y,z,i)
+{
+	if(i==500)
+	{
+		clientMessage("x = esquerdo x+\nx = direito x- \nz+ = para frente\nz- = blocos para tras\ny + = blocos para cima \ny- = blocos para baixo");
+	}
 }
 
 function procCmd(cmd) {
