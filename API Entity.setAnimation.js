@@ -7,9 +7,9 @@ Entity.setAnimation=function()
 	{
 		Entity.setMobSkin(entity,"mob/example_"+progress_ent[i]+".png");
 		progress_ent[i]++;
-		if(progress_ent[i]>=5)//para 5, animação
+		if(progress_ent[i]>=5)//para 5, animaÃ§Ã£o
 		{
-			progress_ent[i]=0;//início do 0
+			progress_ent[i]=0;//inÃ­cio do 0
 		}
 	});
 };
