@@ -11,8 +11,8 @@ nameBlock = Block.defineBlock;
 var dx; var dy; var dz;//var for useItem and ModPE.idSystem
 
 function useItem(x,y,z,i,b,s){
-dx = x; dy = y; dz = z;
 if(i==280){//Id to hit the ground
+dx = x; dy = y; dz = z;
 setTile(dx,dy+1,dz,200);//Loop Look
 }}
 
