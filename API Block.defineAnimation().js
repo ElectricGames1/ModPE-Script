@@ -1,5 +1,5 @@
 //API Block.defineAnimation();
-//By @Isaac300 And @EletricGames123
+//By @Isaac300
 
 //**********_Variables_**********//
 animated = 0;
